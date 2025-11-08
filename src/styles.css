@@ -1,0 +1,219 @@
+/* Mobile-first, WebView-friendly base styles with design system */
+:root {
+  color-scheme: dark;
+  
+  /* Primary - Light Blue palette */
+  --primary-50: #F0FAFB;
+  --primary-100: #D9F2F5;
+  --primary-200: #B8E8ED;
+  --primary-300: #93D4DF;
+  --primary-400: #7BCBD9;
+  --primary-500: #5FB9C9;
+  --primary-600: #4BA3B3;
+  --primary-700: #3A8A98;
+  --primary-800: #2A717D;
+  --primary-900: #1C5862;
+  
+  /* Secondary - Beige/Cream palette */
+  --secondary-50: #FEFBF5;
+  --secondary-100: #FDF6E9;
+  --secondary-200: #FBEFD3;
+  --secondary-300: #F8E5B8;
+  --secondary-400: #F6DD9F;
+  --secondary-500: #F4D69E;
+  --secondary-600: #E8C47E;
+  --secondary-700: #D9AF5E;
+  --secondary-800: #C79A42;
+  --secondary-900: #B3862A;
+  
+  /* Grey scale */
+  --grey-50: #F8F9FA;
+  --grey-100: #E9ECEF;
+  --grey-200: #DEE2E6;
+  --grey-300: #CED4DA;
+  --grey-400: #ADB5BD;
+  --grey-500: #6C757D;
+  --grey-600: #495057;
+  --grey-700: #343A40;
+  --grey-800: #212529;
+  --grey-900: #0D0F12;
+  
+  /* Semantic colors */
+  --success: #4CAF50;
+  --danger: #F44336;
+  --warning: var(--secondary-500);
+  --info: var(--primary-400);
+  
+  /* UI tokens */
+  --bg-primary: var(--grey-900);
+  --bg-secondary: var(--grey-800);
+  --bg-elevated: rgba(33, 37, 41, 0.95);
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-tertiary: rgba(255, 255, 255, 0.5);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+html, body, #app { 
+  height: 100%; 
+  margin: 0;
+  padding: 0;
+}
+
+* { 
+  box-sizing: border-box; 
+  -webkit-tap-highlight-color: transparent;
+}
+
+body { 
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-sans);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+.main { 
+  flex: 1; 
+  min-height: 0; 
+  display: flex; 
+  flex-direction: column;
+  position: relative;
+}
+
+.header { 
+  position: sticky; 
+  top: 0; 
+  z-index: 10; 
+  background: var(--bg-elevated);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.progress-wrap { 
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.progress { 
+  width: 100%; 
+  height: 8px; 
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-full); 
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.progress .bar { 
+  height: 100%; 
+  background: linear-gradient(90deg, var(--primary-400), var(--primary-200));
+  width: 0%; 
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 12px rgba(38, 166, 154, 0.5);
+}
+
+.map-root { 
+  flex: 1; 
+  min-height: 0;
+  position: relative;
+}
+
+.leaflet-container { 
+  height: 100%; 
+  width: 100%; 
+  background: #E8F1F5;
+  font-family: var(--font-sans);
+}
+
+.leaflet-control-attribution { 
+  font-size: 9px;
+  background: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+  border: none !important;
+  padding: 2px 6px !important;
+}
+
+.leaflet-control-zoom a {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #333 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: rgba(255, 255, 255, 1) !important;
+  border-color: #468D9B !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(20px) !important;
+  color: #1a1a1a !important;
+  border-radius: var(--radius-md) !important;
+  border: 1px solid rgba(70, 141, 155, 0.3) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+}
+
+.leaflet-popup-tip {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border: 1px solid rgba(70, 141, 155, 0.3) !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Safe areas for notched devices */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+}

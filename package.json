@@ -1,0 +1,26 @@
+{
+  "name": "city-explore-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5174",
+    "deploy": "npm run build && firebase deploy --only hosting"
+  },
+  "dependencies": {
+    "@vue-leaflet/vue-leaflet": "^0.10.1",
+    "leaflet": "^1.9.4",
+    "lucide-vue-next": "^0.553.0",
+    "vue": "^3.4.0",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "iconv-lite": "^0.7.0",
+    "proj4": "^2.19.10",
+    "shapefile": "^0.6.6",
+    "vite": "^5.4.0"
+  }
+}

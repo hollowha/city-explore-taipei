@@ -1,0 +1,66 @@
+[
+  { 
+    "id": "lm_1", 
+    "name": "台北101", 
+    "lat": 25.033964, 
+    "lng": 121.564468,
+    "category": "culture",
+    "description": "台北市地標建築，曾是世界最高大樓，提供觀景台與購物中心。"
+  },
+  { 
+    "id": "lm_2", 
+    "name": "市政府站", 
+    "lat": 25.040123, 
+    "lng": 121.567456,
+    "category": "transport",
+    "description": "捷運板南線與信義線交會站，連接市政府與信義商圈。"
+  },
+  { 
+    "id": "lm_3", 
+    "name": "象山登山口", 
+    "lat": 25.027192, 
+    "lng": 121.572758,
+    "category": "park",
+    "description": "四獸山步道起點，可俯瞰台北101與信義區美景，是攝影熱點。"
+  },
+  { 
+    "id": "lm_4", 
+    "name": "信義公民會館", 
+    "lat": 25.042, 
+    "lng": 121.566,
+    "category": "culture",
+    "description": "日式建築歷史建物，現為藝文展覽與社區活動空間。"
+  },
+  { 
+    "id": "lm_5", 
+    "name": "松山文創園區", 
+    "lat": 25.043, 
+    "lng": 121.561,
+    "category": "culture",
+    "description": "前身為松山菸廠，現為文創展演與市集熱門場所。"
+  },
+  { 
+    "id": "lm_6", 
+    "name": "中強公園", 
+    "lat": 25.036, 
+    "lng": 121.569,
+    "category": "park",
+    "description": "社區綠地公園，適合休憩散步，設有兒童遊戲區。"
+  },
+  { 
+    "id": "lm_7", 
+    "name": "永春市場", 
+    "lat": 25.041, 
+    "lng": 121.576,
+    "category": "market",
+    "description": "在地傳統市場，早市熱鬧，販售生鮮食材與小吃。"
+  },
+  { 
+    "id": "lm_8", 
+    "name": "信義運動中心", 
+    "lat": 25.044, 
+    "lng": 121.571,
+    "category": "sports",
+    "description": "提供游泳池、球場、健身房等多元運動設施。"
+  }
+]
