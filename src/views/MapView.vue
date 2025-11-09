@@ -449,7 +449,7 @@
           <div class="route-dest">前往 {{ routeInfo.destination }}</div>
           <div class="route-stats">
             <span class="route-distance">{{ (routeInfo.distance / 1000).toFixed(2) }} km</span>
-            <span class="route-time">約 {{ Math.ceil(routeInfo.duration / 60) }} 分鐘</span>
+            <span class="route-time">約 {{ Math.ceil((routeInfo.distance / 1000) / 4.5 * 60) }} 分鐘</span>
           </div>
         </div>
       </div>
